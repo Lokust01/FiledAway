@@ -23,6 +23,7 @@ public class RecyclingBinBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            CameraPositioning.gameStarted = false;
             GameObject gcObject = GameObject.FindGameObjectWithTag("GameController");
             GameControllerBehavior gc = gcObject.GetComponent<GameControllerBehavior>();
             gc.Invoke("NextLevel", 0f);
