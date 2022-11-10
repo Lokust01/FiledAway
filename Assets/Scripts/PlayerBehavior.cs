@@ -68,7 +68,7 @@ public class PlayerBehavior : MonoBehaviour
     void DetectJump()
     {
         
-        if (Input.GetKey(KeyCode.Space) && IsGrounded())
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
 
