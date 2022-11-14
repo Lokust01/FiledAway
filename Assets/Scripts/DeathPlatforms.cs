@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DeathPlatforms : MonoBehaviour
 {
+    
+
+    public Animator dead;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,10 @@ public class DeathPlatforms : MonoBehaviour
         {
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
             PlayerBehavior player = playerObject.GetComponent<PlayerBehavior>();
-            player.Invoke("Restart", 0f);
+
+            dead.SetBool("isDead", true);
+
+            player.Invoke("Restart", 2f);
 
         }
     }

@@ -11,7 +11,9 @@ public class PlayerBehavior : MonoBehaviour
     Rigidbody2D rb;
     
     private Animator movement;
+    public Animator dead;
 
+    public Sprite player;
     //this is for the end, when i need to scale the character down for animations
     public Vector2 scale;
     public float xScale;
@@ -32,7 +34,7 @@ public class PlayerBehavior : MonoBehaviour
         movement = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
 
-       
+        gameObject.GetComponent<SpriteRenderer>().sprite = player;
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class PlayerBehavior : MonoBehaviour
         GameObject drawer = GameObject.FindGameObjectWithTag("Drawer");
         LineDrawerBehavior dr = drawer.GetComponent<LineDrawerBehavior>();
         dr.Invoke("RestartLineDrawn", 0f);
-
+        dead.SetBool("isDead", false);
         transform.position = playerResetCoords;
     //-45, -18, -5
     }

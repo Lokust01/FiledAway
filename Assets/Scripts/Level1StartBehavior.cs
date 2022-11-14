@@ -43,6 +43,10 @@ public class Level1StartBehavior : MonoBehaviour
            
             CameraPositioning.gameStarted = true;
             Destroy(this);
+
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            PlayerBehavior player = playerObject.GetComponent<PlayerBehavior>();
+            player.playerResetCoords = new Vector3(-45, -18, -5);
         }
     }
 }
