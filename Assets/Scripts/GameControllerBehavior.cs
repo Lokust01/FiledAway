@@ -60,6 +60,7 @@ public class GameControllerBehavior : MonoBehaviour
 
     public void StartGame()
     {
+        CameraPositioning.gameStarted = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene);
     }
 

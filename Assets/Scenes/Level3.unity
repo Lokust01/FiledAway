@@ -532,6 +532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 18
   playerSpeed: 15
+  dead: {fileID: 433353310}
+  player: {fileID: 21300000, guid: 9f1b86147d9dad1498fadb31ece6416c, type: 3}
   scale: {x: 0, y: 0}
   xScale: 0
   yScale: 0
@@ -672,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598d3e38b2395f24d96b7c810b36786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: {fileID: 433353310}
 --- !u!61 &447107781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1237,6 +1240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598d3e38b2395f24d96b7c810b36786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: {fileID: 0}
 --- !u!1 &1092606181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598d3e38b2395f24d96b7c810b36786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: {fileID: 433353310}
 --- !u!61 &1092606184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2649,6 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598d3e38b2395f24d96b7c810b36786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: {fileID: 433353310}
 --- !u!61 &1737101022
 BoxCollider2D:
   m_ObjectHideFlags: 0
