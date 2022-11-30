@@ -24,7 +24,7 @@ public class GameControllerBehavior : MonoBehaviour
     {
         DetectRestart();
 
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.B))
         {
             NextLevel();
         }
