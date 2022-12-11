@@ -9,7 +9,8 @@ public class GameControllerBehavior : MonoBehaviour
     public GameObject continueButton;
     public GameObject levelSelect;
     public GameObject gameTitleText;
-    
+    public GameObject sfxSlider;
+    public GameObject musicSlider;
 
     static int  currentScene = 2;
 
@@ -87,7 +88,6 @@ public class GameControllerBehavior : MonoBehaviour
 
     }
 
-
     public void Quit()
     {
         Application.Quit();
@@ -96,7 +96,7 @@ public class GameControllerBehavior : MonoBehaviour
     public void BackToStartMenu()
     {
         CameraPositioning.gameStarted = false;
-        if (currentScene >= 5)
+        if (currentScene >= 6)
         {
             currentScene = 2;
 

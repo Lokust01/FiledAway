@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DeathPlatforms : MonoBehaviour
 {
-    
 
+    public AudioClip crashSound;
     public Animator dead;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,8 @@ public class DeathPlatforms : MonoBehaviour
             PlayerBehavior player = playerObject.GetComponent<PlayerBehavior>();
 
             dead.SetBool("isDead", true);
+
+            AudioSource.PlayClipAtPoint(crashSound, Camera.main.transform.position);
 
             player.Invoke("Restart", 2f);
 

@@ -24,6 +24,8 @@ public class PlayerBehavior : MonoBehaviour
 
     public Vector3 playerResetCoords;
 
+    
+
     [SerializeField] private LayerMask jumpableGround;
 
     // Start is called before the first frame update
@@ -58,7 +60,15 @@ public class PlayerBehavior : MonoBehaviour
         dr.Invoke("RestartLineDrawn", 0f);
         dead.SetBool("isDead", false);
         transform.position = playerResetCoords;
-    //-45, -18, -5
+
+        GameObject sa1Object = GameObject.FindGameObjectWithTag("SA1");
+        SpawnAreaBehavior sa1 = sa1Object.GetComponent<SpawnAreaBehavior>();
+        sa1.SpawnEnemies();
+
+        GameObject sa2Object = GameObject.FindGameObjectWithTag("SA2");
+        SpawnAreaBehavior sa2 = sa2Object.GetComponent<SpawnAreaBehavior>();
+        sa2.SpawnEnemies();
+        //-45, -18, -5
     }
 
     private bool IsGrounded()
