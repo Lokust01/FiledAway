@@ -9,8 +9,7 @@ public class GameControllerBehavior : MonoBehaviour
     public GameObject continueButton;
     public GameObject levelSelect;
     public GameObject gameTitleText;
-    public GameObject sfxSlider;
-    public GameObject musicSlider;
+
 
     static int  currentScene = 2;
 
@@ -25,7 +24,7 @@ public class GameControllerBehavior : MonoBehaviour
     {
         DetectRestart();
 
-        if (Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.B))
+        if (Input.GetKey(KeyCode.L) && Input.GetKey(KeyCode.B))
         {
             NextLevel();
         }
